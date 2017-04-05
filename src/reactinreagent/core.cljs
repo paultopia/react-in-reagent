@@ -5,7 +5,7 @@
 ;; Views
 
 (defn home-page []
-  (let [react-datasheet (aget js/window "deps" "react-datasheet")]
+  (let [react-datasheet (aget js/window "ReactDatasheet")]
     [:div
      [:h2 "Hmm.?"]
      [:> react-datasheet {:data (clj->js [[{"value" "1"} {"value" "2"}
