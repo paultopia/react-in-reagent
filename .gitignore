@@ -6,6 +6,8 @@ pom.xml
 pom.xml.asc
 *.jar
 *.class
+/reactstuff
+/node_modules
 /.lein-*
 /.nrepl-port
 /resources/public/js

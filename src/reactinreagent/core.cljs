@@ -5,7 +5,11 @@
 ;; Views
 
 (defn home-page []
-  [:div [:h2 "Welcome to Reagent"]])
+  (let [react-datasheet (aget js/window "deps" "react-datasheet")]
+    [:div
+     [:h2 "Hmm.?"]
+     [:> react-datasheet {:data (clj->js [[{"value" "1"} {"value" "2"}
+                                           {"value" "3"} {"value" "4"}]])}]]))
 
 ;; -------------------------
 ;; Initialize app
@@ -15,3 +19,4 @@
 
 (defn init! []
   (mount-root))
+
